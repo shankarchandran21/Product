@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv'
 import productRoute from './Router/productRoute.js'
+import userRouter from './Router/userRouter.js'
 dotenv.config()
 const PORT = process.env.PORT 
 const CONNECTION_URL = process.env.CONNECTION_URL
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 app.use('/api/p1/products',productRoute)
+app.use('/api/p1/products',userRouter)
 app.get('/', (req, res) => {
     res.send(`<h1>HIIII SHANKAR</h1>`)
 })

@@ -1,7 +1,6 @@
 import mongoose  from 'mongoose'
 
-
-const userSchema = mongoose.Schema({
+ const userSchema = mongoose.Schema({
     category:{
         type: 'string',
         require: true
@@ -17,6 +16,10 @@ const userSchema = mongoose.Schema({
     }
 })
 
+
+
+
 const Product = mongoose.model('Product',userSchema)
+
 
 export default Product
